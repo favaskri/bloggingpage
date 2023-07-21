@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+    <h1>Create a New Post</h1>
+    <form action="/compose" method="post"></form>
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" name="titleName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" id="comment" name="comment" rows="4" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Publish</button>
+    </form>
+  </div>
+
+  <!-- Add Bootstrap JS and jQuery (required for Bootstrap features) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<%- include('partials/footer') %>
