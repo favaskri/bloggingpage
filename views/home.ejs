@@ -1,6 +1,15 @@
 <%- include('partials/header') %>
 
-<h1>Home test</h1>
+<h1>Home</h1>
 <p><%= startingContent %></p>
+<%posts.forEach((post)=>{%>
+<h1><%= post.title %></h1>
+<!-- // Split the content into lines using the newline character ("\n") -->
+<% var blogContent = post.content %>
 
-<%- include('partials/footer') %>
+<!-- // Get the first line -->
+<% var firstLine = blogContent.slice(0,100) +" ..." %>
+
+<p><%= firstLine %></p>
+<a href="/posts/ <%=post.title %>">Read More</a>
+<% console.log(post.title) }) %> <%- include('partials/footer') %>
